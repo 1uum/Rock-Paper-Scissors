@@ -63,22 +63,39 @@ function playRound (playerSelection, computerSelection){
     }
 }
 
-
-
-
 function game(){
     let cpuPoints = 0;
     let playerPoints = 0;
-    let playerSelection = userPlay();
-    let computerSelection = computerPlay();
-    let winner = playRound(playerSelection, computerSelection);
-    console.log("The winner is: " + winner);
-    alert("The winner is: " + winner);
+    while (!over){
+        let playerSelection = userPlay();
+        let computerSelection = computerPlay();
+        let winner = playRound(playerSelection, computerSelection);
+        console.log("player chooses: " + playerSelection);
+        console.log("cpu chooses: " + computerSelection);
+        
+        if (winner == "player"){
+            playerPoints = playerPoints + 1;
+        } else if (winner == "cpu"){
+            cpuPoints = cpuPoints + 1;
+        }
+
+        console.log ("winner is: " + winner);
+        alert ("The score is you: " + playerPoints + " | the cpu: " + cpuPoints);
+        
+        if (playerPoints == 3 || cpuPoints ==3){
+            over = true;
+            if (playerPoints == 3){
+                alert ("You won this time! congratulations!  :)");
+            } else if (cpuPoints == 3){
+                alert ("You lost! Better luck next time! :(")
+            }
+        }
+    }    
 }
 
 let over = false;
 
-alert ("Let's play Rock, Papper, scissors!");
-alert ("Are you ready?");
+alert ("Let's play rock, papper, scissors!");
+alert ("To the best of five! Are you ready?");
 
 game();
