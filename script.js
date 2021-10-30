@@ -7,6 +7,7 @@ function computerPlay(){
 
 function userPlay(){
     userChoice = prompt ("choose! rock, paper, scissors!");
+    userChoice = userChoice.toLocaleLowerCase();
     return (userChoice);
 }
 
@@ -70,8 +71,6 @@ function game(){
         let playerSelection = userPlay();
         let computerSelection = computerPlay();
         let winner = playRound(playerSelection, computerSelection);
-        console.log("player chooses: " + playerSelection);
-        console.log("cpu chooses: " + computerSelection);
         
         if (winner == "player"){
             playerPoints = playerPoints + 1;
