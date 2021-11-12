@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+html, body{
+    background: rgb(45, 45, 45);
+    height: 100%;
+}
+
+.body{
+    display:flex;
+}
+
+.wrapper{
+    min-height: calc(100% - 9rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    border: 3px solid hsl(0, 0%, 100%);
+    margin-top: 1em;
+    margin-bottom: 1em;
+    padding: 20px 140px;
+}
+
+.title{
+    color: hsl(0, 0%, 100%);
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+/*----------------------------------------------------------------*/
+
+.player_score, .cpu_score{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 30px;
+    font-weight: 500;
+    color:hsl(0, 0%, 100%);
+    margin: 10px 15px;
+}
+
+.selection{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.player__selection , .cpu__selection{
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+    color: hsl(0, 0%, 100%);
+    border: 3px solid currentColor;
+    min-width: 250px;
+}
+
+.playerRock, .playerPaper, .playerScissors{
+    width: 125px;
+    height: 125px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 5px solid hsl(308, 100%, 50%);
+    border-radius: 50%;
+    margin-top: 1em;
+    margin-bottom: 2em;
+    cursor: pointer;
+    margin-left: 60px;
+}
+
+.playerRock:hover, .playerScissors:hover, .playerPaper:hover{
+    transform: scale(1.1);
+}
+
+.cpuRock, .cpuPaper, .cpuScissors{
+    width: 125px;
+    height: 125px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 5px solid hsl(175, 100%, 50%);
+    border-radius: 50%;
+    margin-top: 1em;
+    margin-bottom: 2em;
+    margin-left: 60px;
+}
+
+.status{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid hsl(0, 0%, 100%);
+    margin-top: 1em;
+    margin-bottom: 1em;
+    min-width: 608px;
+    min-height: 94px;
+}
+
+.footer{
+    background-color: rgb(34, 34, 34);
+    padding: 2em;
+}
+
+.playerRock{
+    background-image: url(rock-player.png);
+}
+.playerPaper{
+    background-image: url(paper-player.png);
+}
+.playerScissors{
+    background-image: url(scissors-player.png);
+}
+.cpuRock{
+    background-image: url(rock-cpu.png) ;
+}
+.cpuPaper{
+    background-image: url(paper-cpu.png);
+}
+.cpuScissors{
+    background-image: url(scissors-cpu.png);
+}
