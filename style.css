@@ -107,7 +107,12 @@ html, body{
 
 .footer{
     background-color: rgb(34, 34, 34);
-    padding: 2em;
+    padding: 1em;
+    display: flex;
+    font-size: 15px;
+    justify-content: center;
+    width: 100%;
+    bottom: 0;
 }
 
 .playerRock{
@@ -127,4 +132,9 @@ html, body{
 }
 .cpuScissors{
     background-image: url(scissors-cpu.png);
+}
+
+a{
+    text-decoration: none;
+    color:#ffffff;
 }
